@@ -1,0 +1,10 @@
+//
+// Prefix header for all source files of the 'SpinArt' target in the 'SpinArt' project
+//
+
+#ifdef __OBJC__
+	#import <Foundation/Foundation.h>
+	#import <UIKit/UIKit.h>
+#endif
+
+#define SHImageString(str, ext)	({ UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone ?	([NSString stringWithFormat:@"%@.%@", (str), (ext)]) : ([NSString stringWithFormat:@"%@_pad.%@", (str), (ext)]); })
